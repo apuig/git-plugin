@@ -1145,11 +1145,11 @@ They are the same for a regular commit, but diverge when commits are replayed or
 | Developer (same)
 
 | GitHub "Create a merge commit"
-| Developer
+| GitHub user who clicked merge
 | `noreply@github.com`
 
 | GitHub "Squash and merge"
-| GitHub user who clicked merge
+| Developer
 | `noreply@github.com`
 
 | GitHub "Rebase and merge"
@@ -1172,7 +1172,7 @@ They are the same for a regular commit, but diverge when commits are replayed or
 [NOTE]
 ====
 For squash merges the original author information is collapsed into a single commit at the Git level.
-The original developer identity is not recoverable from a squash commit regardless of this setting.
+The original developer identity remains recoverable from the author field when this setting is enabled.
 ====
 
 This option affects all consumers of link:https://javadoc.jenkins.io/hudson/scm/ChangeLogSet.Entry.html[`ChangeLogSet.Entry#getAuthor()`] in the job, such as notifications and build changelog display.
